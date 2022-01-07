@@ -1,3 +1,2 @@
 # JAVASCRIPT
-
-### Contagem de números 
+Contagem de números
