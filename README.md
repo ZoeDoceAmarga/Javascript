@@ -1,2 +1,2 @@
 # JAVASCRIPT
-Contagem de números
+Contagem de númerose e window.alert 
