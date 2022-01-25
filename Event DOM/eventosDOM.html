@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVENTOS DOM</title>
+    <style>
+        div{
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+            font-family:  Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            border-radius: 10px;
+        }
+        div#area1{
+            background: rgb(99, 228, 99);
+            font-size: 27px;
+        }
+        div#area2{
+            background-color: rgb(253, 249, 28);
+            font-size: 22px;
+            margin-left: 25px;
+
+        }
+        body{
+            background-color: rgb(136, 217, 228);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="area1"  >CLICA...
+        
+    </div>
+    <div id="area2" >
+        PASSE O MOUSE!
+    </div>
+    <script>
+        var mudar =window.document.getElementById('area1');
+        var mexer=window.document.getElementById('area2');
+        var saindo=window.document.getElementById('area2')
+
+     //.addEventListener serve para ficar atento all the time se vai ter o gatilho para disparar o evento
+        mudar.addEventListener('click',clicar)   
+        mexer.addEventListener('mousemove',mexendoMouse)
+        saindo.addEventListener('mouseout',sair)
+
+        function clicar(){
+
+            mudar.innerText='Clicou!'
+        }
+        function mexendoMouse(){
+            mexer.innerText="Passou o mouse"
+            mexer.style.backgroundColor='red'
+        }
+        function sair(){
+            saindo.innerText='Tirou o mouse'
+            saindo.style.backgroundColor='grey'
+        }
+    </script>
+</body>
+</html>
